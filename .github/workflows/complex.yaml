@@ -7,24 +7,25 @@ jobs:
     name: job1 - print the date
     runs-on: ubuntu-latest
     steps:
-    - step:
-        run: date
+    - name: print date
+      run: date
 
   job2:
     name: job2 - print the date
     runs-on: windows-latest
     steps:
-    - step:
+    - name: print date
       run: date /t
   job3:
     name: job3 - print the date
     runs-on: macos-latest
     steps:
-    - step:
+    - name: print date
       run: date
   job4:
     name: job4 - print the date
     runs-on: ubuntu-latest
     needs: [job1, job2, job3]
     steps:
-    - step: date
+    - name: print date
+      run: date
