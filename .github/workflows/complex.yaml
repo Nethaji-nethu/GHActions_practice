@@ -15,7 +15,7 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: print date
-      run: date /t
+      run: "date /t"
   job3:
     name: job3 - print the date
     runs-on: macos-latest
